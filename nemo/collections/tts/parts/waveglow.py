@@ -245,7 +245,7 @@ class WaveGlow(torch.nn.Module):
                 audio = torch.cat((z, audio), 1)
             # k -= 1
 
-        audio = audio.permute(0, 2, 1).contiguous().view(audio.size(0), -1).data
+        audio = audio.permute(0, 2, 1).contiguous().view(audio.size(0), -1)
         return audio
 
 
